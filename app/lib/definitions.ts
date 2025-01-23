@@ -23,7 +23,7 @@ export type Invoice = {
   date: string;
   // TypeScript에서는 이를 "문자열 유니언 타입"이라고 합니다.
   // 이는 "status" 속성이 'pending' 또는 'paid' 두 문자열 중 하나만 가질 수 있다는 의미입니다.
-  status: "pending" | "paid";
+  status: 'pending' | 'paid';
 };
 
 export type Revenue = {
@@ -40,7 +40,7 @@ export type LatestInvoice = {
 };
 
 // The database returns a number for amount, but we later format it to a string with the formatCurrency function
-export type LatestInvoiceRaw = Omit<LatestInvoice, "amount"> & {
+export type LatestInvoiceRaw = Omit<LatestInvoice, 'amount'> & {
   amount: number;
 };
 
@@ -52,7 +52,7 @@ export type InvoicesTable = {
   image_url: string;
   date: string;
   amount: number;
-  status: "pending" | "paid";
+  status: 'pending' | 'paid';
 };
 
 export type CustomersTableType = {
@@ -84,5 +84,5 @@ export type InvoiceForm = {
   id: string;
   customer_id: string;
   amount: number;
-  status: "pending" | "paid";
+  status: 'pending' | 'paid';
 };

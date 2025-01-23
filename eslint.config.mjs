@@ -18,7 +18,7 @@ export default [
         {
           endOfLine: "auto",
           semi: true,
-          singleQuote: false,
+          singleQuote: true,
         },
       ],
       "react/react-in-jsx-scope": "off", // import React from 'react'는 Next.js에서 필요하지 않습니다
